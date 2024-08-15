@@ -2,14 +2,14 @@ import Layout from "./Layout";
 import Logo from "./Logo";
 import Button from "./Button";
 import theme from "../../utils/theme";
+import "./Nav.css";
 
 export const NavLink = (props) => {
   const { text, url, isDropdown } = props;
   return (
     <a
+      className="navLink"
       style={{
-        textDecoration: "none",
-        margin: "0 0.5em",
         color: theme.colors.darkGrey,
       }}
       href={url}
@@ -24,7 +24,6 @@ const Nav = () => {
     {
       text: "Features",
       url: "/features",
-      isDropdown: true,
     },
     {
       text: "Examples",
@@ -41,7 +40,6 @@ const Nav = () => {
     {
       text: "Resources",
       url: "/resources",
-      isDropdown: true,
     },
   ];
 
@@ -52,6 +50,7 @@ const Nav = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
+          gap: "5em",
           width: "100%",
           padding: "1.5em 0",
         }}
@@ -79,6 +78,7 @@ const Nav = () => {
             display: "flex",
             alignItems: "center",
             gap: "1em",
+            width: "20em",
           }}
         >
           <NavLink text="Login" url="/login" />
