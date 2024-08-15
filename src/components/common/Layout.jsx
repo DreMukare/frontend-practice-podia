@@ -4,7 +4,7 @@ const Layout = (props) => {
   return (
     <div
       style={{
-        padding: "0 4em",
+        padding: "0 16em",
         margin: "auto",
       }}
     >
