@@ -1,6 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import theme from "../../utils/theme";
 
 const Logo = () => {
+  const navigate = useNavigate();
+
   return (
     <button
       style={{
@@ -12,6 +15,7 @@ const Logo = () => {
         color: theme.colors.purple,
         fontWeight: "bold",
       }}
+      onClick={() => navigate("/")}
     >
       podia
     </button>
