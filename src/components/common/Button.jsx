@@ -12,6 +12,7 @@ const Button = (props) => {
         fontSize: "0.8em",
         color: theme.colors.eggShell,
         borderRadius: "25px",
+        cursor: "pointer",
       }}
       onClick={() => handleClick()}
     >
