@@ -3,6 +3,8 @@ import PageLayout from "../common/PageLayout";
 import Nav from "../common/Nav";
 import Hero from "../common/Hero";
 import Layout from "../common/Layout";
+import ProductShowcase from "../DigitalProducts/ProductShowcase";
+import ProductsListing from "../DigitalProducts/ProductsListing";
 
 const DigitalProducts = () => {
   return (
@@ -14,7 +16,10 @@ const DigitalProducts = () => {
         heroCopy="Get everything you need in one place that you own. Podia takes care of hosting products, taking payments, and getting products to your customers. And you always control your own work."
         ctaButtonText="Get your free account"
         catButtonFunction={() => {}}
+        isHero
       />
+      <ProductShowcase />
+      <ProductsListing />
     </Layout>
   );
 };
