@@ -1,4 +1,3 @@
-import React from "react";
 import Button from "./Button";
 import theme from "../../utils/theme";
 
@@ -10,32 +9,54 @@ const Hero = (props) => {
     heroCopy,
     ctaButtonText,
     ctaButtonFunction,
+    linkHref,
+    linkText,
+    isHero,
   } = props;
 
   return (
-    <div>
-      <h1
-        style={{
-          color: theme.colors.darkGrey,
-          fontSize: "1em",
-          marginBottom: 10,
-        }}
-      >
-        {titleText.toUpperCase()}
-      </h1>
+    <div
+      style={{
+        width: "100%",
+        margin: "1.5em 0",
+      }}
+    >
+      {isHero && (
+        <h1
+          style={{
+            color: theme.colors.darkGrey,
+            fontSize: "1em",
+            marginBottom: 10,
+          }}
+        >
+          {titleText.toUpperCase()}
+        </h1>
+      )}
       <div
         style={{
           display: "flex",
-          alignItems: "flex-start",
+          alignItems: isHero ? "flex-start" : "center",
           justifyContent: "center",
           gap: "1em",
         }}
       >
         <div>
+          {!isHero && (
+            <h1
+              style={{
+                color: theme.colors.darkGrey,
+                fontSize: "1em",
+                marginBottom: 10,
+              }}
+            >
+              {titleText.toUpperCase()}
+            </h1>
+          )}
           <h2
             style={{
-              fontFamily: "tiempos",
-              fontSize: "2.7em",
+              fontFamily: theme.fonts.serif,
+              fontSize: isHero ? "3.5em" : "2.2em",
+              width: isHero ? "90%" : "100%",
               lineHeight: "1.2em",
               marginBottom: 0,
               marginTop: 0,
@@ -45,15 +66,29 @@ const Hero = (props) => {
           </h2>
           <p
             style={{
+              width: isHero ? "90%" : "100%",
               lineHeight: "1.5em",
-              fontSize: "1.2em",
+              fontSize: isHero ? "1.5em" : "1.2em",
+              margin: "1em 0",
             }}
           >
             {heroCopy}
           </p>
-          <Button text={ctaButtonText} handleClick={ctaButtonFunction} />
+          {ctaButtonText ? (
+            <Button text={ctaButtonText} handleClick={ctaButtonFunction} />
+          ) : (
+            <a
+              style={{
+                textDecoration: "none",
+              }}
+              href={linkHref}
+            >
+              {linkText}
+              {" ->"}
+            </a>
+          )}
         </div>
-        <img width={"60%"} src={heroImg} />
+        <img width={"50%"} src={heroImg} />
       </div>
     </div>
   );
