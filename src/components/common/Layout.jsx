@@ -4,8 +4,9 @@ const Layout = (props) => {
   return (
     <div
       style={{
-        padding: "0 16em",
+        padding: "0 8em",
         margin: "auto",
+        width: "100%",
       }}
     >
       {children}
