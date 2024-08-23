@@ -53,6 +53,7 @@ const Nav = () => {
           gap: "5em",
           width: "100%",
           padding: "1.5em 0",
+          margin: "auto",
         }}
       >
         <div
