@@ -6,6 +6,10 @@ const theme = {
     lightPurple: "#9484c6",
     cream: "#f5efeb",
     darkGrey: "#333333",
+    gold: "#F5A633",
+  },
+  fonts: {
+    serif: "tiempos",
   },
 };
 
